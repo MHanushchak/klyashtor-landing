@@ -183,9 +183,50 @@ button {
   box-shadow: 0 12px 30px rgba(245, 227, 64, 0.22);
 }
 
-.btn-primary:hover,
-.btn-primary:focus-visible {
-  background: var(--yellow-dark);
+.header-cta {
+  display: inline-flex;
+}
+
+.mobile-header-cta {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--white);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .btn-secondary {
@@ -862,28 +903,60 @@ button {
     transform: none;
   }
 }
-
 @media (max-width: 860px) {
   .site-header {
-    position: static;
+    /* Видалено position: static, щоб шапка завжди була зверху і не "стрибала" */
+    background: rgba(
+      26,
+      25,
+      21,
+      0.95
+    ); /* Робимо фон трохи щільнішим на мобільних, щоб текст меню не зливався з контентом */
   }
 
   .header-inner {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
     gap: 14px;
     padding: 18px 0;
   }
 
   .logo {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .logo-mark {
+    width: 60px; /* Трохи зменшив лого для мобільних, щоб не забирало багато місця */
+    height: 60px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .mobile-header-cta {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 8px;
   }
 
   .main-nav {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    display: none;
+    grid-column: 1 / -1; /* Розтягує меню на всю ширину під логотипом */
     width: 100%;
+    gap: 10px;
+    padding-top: 16px;
+    padding-bottom: 12px;
+  }
+
+  .main-nav.is-open {
+    display: grid;
+    animation: fadeInMenu 0.3s ease-out forwards; /* Додана плавна анімація появи */
   }
 
   .main-nav a {
@@ -895,13 +968,9 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .header-inner > .btn {
-    width: 100%;
-  }
-
   .hero {
     min-height: auto;
-    padding-top: 72px;
+    padding-top: 120px; /* Адаптував відступ, щоб фіксована шапка не перекривала заголовок */
   }
 
   .hero-panel {
@@ -1266,6 +1335,17 @@ input[name="price-tabs"] {
   from {
     opacity: 0;
     transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;

@@ -32,15 +32,29 @@
           <span>Кляштор</span>
         </a>
 
-        <nav class="main-nav" aria-label="Головна навігація">
+        <button
+          class="menu-toggle"
+          type="button"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Відкрити меню"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Головна навігація">
           <a href="#about">Про нас</a>
           <a href="#services">Напрямки</a>
           <a href="#trainers">Тренери</a>
           <a href="#pricing">Прайс</a>
           <a href="#contacts">Контакти</a>
+          <a href="#pricing" class="btn btn-primary mobile-header-cta">Купити абонемент</a>
         </nav>
 
-        <a href="#pricing" class="btn btn-primary">Купити абонемент</a>
+        <a href="#pricing" class="btn btn-primary header-cta">Купити абонемент</a>
       </div>
     </header>
 
@@ -1062,6 +1076,30 @@
           });
         });
       });
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const mainNav = document.getElementById("main-nav");
+
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", () => {
+          const isOpen = mainNav.classList.toggle("is-open");
+          menuToggle.classList.toggle("is-open", isOpen);
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+          menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Закрити меню" : "Відкрити меню"
+          );
+        });
+
+        mainNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mainNav.classList.remove("is-open");
+            menuToggle.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Відкрити меню");
+          });
+        });
+      }
 
       const trainerGrid = document.getElementById("trainer-grid");
       const trainerToggle = document.getElementById("trainer-toggle");
