@@ -51,10 +51,14 @@
           <a href="#trainers">Тренери</a>
           <a href="#pricing">Прайс</a>
           <a href="#contacts">Контакти</a>
-          <a href="#pricing" class="btn btn-primary mobile-header-cta">Купити абонемент</a>
+          <a href="#pricing" class="btn btn-primary mobile-header-cta"
+            >Купити абонемент</a
+          >
         </nav>
 
-        <a href="#pricing" class="btn btn-primary header-cta">Купити абонемент</a>
+        <a href="#pricing" class="btn btn-primary header-cta"
+          >Купити абонемент</a
+        >
       </div>
     </header>
 
@@ -172,7 +176,7 @@
             </a>
 
             <!-- Тут розташовані інші картки напрямків (Персональні тренери, Групові тренування, MMA, Fitbox, Break Dance, Масаж, Реабілітація, Спортивне харчування) -->
-            <a class="service-card" id="trainers" href="#trainers-section">
+            <a class="service-card" href="#trainers-section">
               <div class="service-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -421,7 +425,7 @@
       </section>
 
       <!-- === ВІТРИНА ТРЕНЕРІВ (CAROUSEL / SHOWCASE) === -->
-      <section class="section trainers-showcase" id="coach-picker">
+      <section class="section trainers-showcase" id="trainers">
         <div class="container">
           <div class="eyebrow">Обери тренера</div>
           <h2 class="section-heading">Тренер, який підходить саме тобі</h2>
@@ -431,27 +435,131 @@
             результату.
           </p>
 
-          <div class="trainer-grid is-collapsed" id="trainer-grid" aria-label="Список тренерів">
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/1.jpg" alt="Тренер 1" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card featured-trainer"><div class="trainer-card-image"><img src="./trainers/2.jpg" alt="Тренер 2" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/3.jpg" alt="Тренер 3" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/4.jpg" alt="Тренер 4" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/5.jpg" alt="Тренер 5" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/6.jpg" alt="Тренер 6" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/7.jpg" alt="Тренер 7" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card featured-trainer"><div class="trainer-card-image"><img src="./trainers/8.jpg" alt="Тренер 8" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/9.jpg" alt="Тренер 9" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/10.jpg" alt="Тренер 10" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/11.jpg" alt="Тренер 11" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/12.jpg" alt="Тренер 12" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/13.jpg" alt="Тренер 13" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card featured-trainer"><div class="trainer-card-image"><img src="./trainers/14.jpg" alt="Тренер 14" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/15.jpg" alt="Тренер 15" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/16.jpg" alt="Тренер 16" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/17.jpg" alt="Тренер 17" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/18.jpg" alt="Тренер 18" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card featured-trainer"><div class="trainer-card-image"><img src="./trainers/19.jpg" alt="Тренер 19" /></div><div class="trainer-card-body"></div></article>
-            <article class="trainer-card"><div class="trainer-card-image"><img src="./trainers/20.jpg" alt="Тренер 20" /></div><div class="trainer-card-body"></div></article>
+          <div
+            class="trainer-grid is-collapsed"
+            id="trainer-grid"
+            aria-label="Список тренерів"
+          >
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/1.jpg" alt="Тренер 1" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card featured-trainer">
+              <div class="trainer-card-image">
+                <img src="./trainers/2.jpg" alt="Тренер 2" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/3.jpg" alt="Тренер 3" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/4.jpg" alt="Тренер 4" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/5.jpg" alt="Тренер 5" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/6.jpg" alt="Тренер 6" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/7.jpg" alt="Тренер 7" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card featured-trainer">
+              <div class="trainer-card-image">
+                <img src="./trainers/8.jpg" alt="Тренер 8" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/9.jpg" alt="Тренер 9" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/10.jpg" alt="Тренер 10" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/11.jpg" alt="Тренер 11" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/12.jpg" alt="Тренер 12" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/13.jpg" alt="Тренер 13" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card featured-trainer">
+              <div class="trainer-card-image">
+                <img src="./trainers/14.jpg" alt="Тренер 14" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/15.jpg" alt="Тренер 15" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/16.jpg" alt="Тренер 16" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/17.jpg" alt="Тренер 17" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/18.jpg" alt="Тренер 18" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card featured-trainer">
+              <div class="trainer-card-image">
+                <img src="./trainers/19.jpg" alt="Тренер 19" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
+            <article class="trainer-card">
+              <div class="trainer-card-image">
+                <img src="./trainers/20.jpg" alt="Тренер 20" />
+              </div>
+              <div class="trainer-card-body"></div>
+            </article>
           </div>
 
           <div class="trainer-actions">
@@ -1087,7 +1195,7 @@
           menuToggle.setAttribute("aria-expanded", String(isOpen));
           menuToggle.setAttribute(
             "aria-label",
-            isOpen ? "Закрити меню" : "Відкрити меню"
+            isOpen ? "Закрити меню" : "Відкрити меню",
           );
         });
 
