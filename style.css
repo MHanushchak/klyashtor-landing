@@ -870,18 +870,42 @@ button {
 
   .header-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 14px;
     padding: 18px 0;
   }
 
+  .logo {
+    justify-content: center;
+  }
+
   .main-nav {
-    flex-wrap: wrap;
-    gap: 14px 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+
+  .main-nav a {
+    display: flex;
+    justify-content: center;
+    padding: 12px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .header-inner > .btn {
+    width: 100%;
   }
 
   .hero {
     min-height: auto;
     padding-top: 72px;
+  }
+
+  .hero-panel {
+    padding: 24px;
   }
 
   .desktop-pricing {
@@ -895,13 +919,25 @@ button {
 
 @media (max-width: 640px) {
   .section {
-    padding: 72px 0;
+    padding: 64px 0;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .footer-grid,
+  .service-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .service-detail-grid.reverse {
+    direction: ltr;
   }
 
   .service-grid {
     grid-template-columns: none;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(220px, 78vw);
+    grid-auto-columns: minmax(220px, 82vw);
     gap: 14px;
     overflow-x: auto;
     padding: 10px 4px 14px;
@@ -935,6 +971,41 @@ button {
 
   .service-card p {
     display: none;
+  }
+
+  .trainer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .trainer-grid.is-collapsed .trainer-card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .trainer-toggle {
+    min-width: 100%;
+  }
+
+  .pricing-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .pricing-tabs a {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .pricing-group,
+  .pricing-rules,
+  .footer-card,
+  .map-card {
+    padding: 20px;
+  }
+
+  .map-placeholder iframe {
+    min-height: 260px;
   }
 
   .container {
