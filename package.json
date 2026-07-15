@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "postbuild": "react-snap",
+    "deploy": "npm run build && vercel --prod --cwd dist",
     "lint": "eslint src --ext js,jsx",
     "preview": "vite preview"
   },
